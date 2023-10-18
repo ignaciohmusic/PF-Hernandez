@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'DM Serif Text', serif;
+}
+body {
+    height: 600vh;
+    display: grid;
+    grid-template-rows: 3% 84% 13%;
+    grid-template-columns: repeat(3, 1fr) ;
+    grid-template-areas:
+    "header header header"
+    "main main main"
+    "footer footer footer";
+}
+header {
+    background-color: black;
+    position: sticky;
+    top: 0;
+    grid-area: header;
+} 
+#logoMarca {
+    display: flex;
+    justify-content: center;
+}
+nav div a {
+    font-size: 1rem;
+}
+main {
+    background-color: rgb(255, 255, 255);
+    grid-area: main;
+}
+footer {
+    background-color: black;
+    grid-area: footer;
+
+}
