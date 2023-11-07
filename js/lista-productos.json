@@ -1,0 +1,122 @@
+[
+    {
+        "id": "buzo-negro",
+        "titulo": "Buzo Negro",
+        "imagen": "./assets/image/buzo-negro.jpg",
+        "categoria": {
+            "nombre": "Buzos",
+            "id": "buzos"
+        },
+        "precio": 17000
+      },
+      {
+        "id": "buzo-marron",
+        "titulo": "Buzo Marron",
+        "imagen": "./assets/image/buzo-marron.jpg",
+        "categoria": {
+            "nombre": "Buzos",
+            "id": "buzos"
+        },
+        "precio": 15500
+      },
+      {
+        "id": "buzo-verde",
+        "titulo": "Buzo Verde",
+        "imagen": "./assets/image/buzo-verde.jpg",
+        "categoria": {
+            "nombre": "Buzos",
+            "id": "buzos"
+        },
+        "precio": 14500
+      },
+      {
+        "id": "buzo-violeta",
+        "titulo": "Buzo Violeta",
+        "imagen": "./assets/image/buzo-violeta.jpg",
+        "categoria": {
+            "nombre": "Buzos",
+            "id": "buzos"
+        },
+        "precio": 13000
+      },
+      {
+        "id": "remera-negra",
+        "titulo": "Remera Negra",
+        "imagen": "./assets/image/remera-negra.jpg",
+        "categoria": {
+            "nombre": "Remeras",
+            "id": "remeras"
+        },
+        "precio": 8000
+      },
+      {
+        "id": "remera-blanca",
+        "titulo": "Remera Blanca",
+        "imagen": "./assets/image/remera-blanca.jpg",
+        "categoria": {
+            "nombre": "Remeras",
+            "id": "remeras"
+        },
+        "precio": 7000
+      },
+      {
+        "id": "remera-verde",
+        "titulo": "Remera Verde",
+        "imagen": "./assets/image/remera-verde.jpg",
+        "categoria": {
+            "nombre": "Remeras",
+            "id": "remeras"
+        },
+        "precio": 7000
+      },
+      {
+        "id": "remera-azul",
+        "titulo": "Remera Azul",
+        "imagen": "./assets/image/remera-azul.jpg",
+        "categoria": {
+            "nombre": "Remeras",
+            "id": "remeras"
+        },
+        "precio": 7000
+      },
+      {
+        "id": "pantalon-negro",
+        "titulo": "Pantalon Negro",
+        "imagen": "./assets/image/pantalon-negro.jpg",
+        "categoria": {
+            "nombre": "Pantalones",
+            "id": "pantalones"
+        },
+        "precio": 16000
+      },
+      {
+        "id": "pantalon-crema",
+        "titulo": "Pantalon Crema",
+        "imagen": "./assets/image/pantalon-crema.jpg",
+        "categoria": {
+            "nombre": "Pantalones",
+            "id": "pantalones"
+        },
+        "precio": 16000
+      },
+      {
+        "id": "pantalon-verde",
+        "titulo": "Pantalon Verde",
+        "imagen": "./assets/image/pantalon-verde.jpg",
+        "categoria": {
+            "nombre": "Pantalones",
+            "id": "pantalones"
+        },
+        "precio": 16000
+      },
+      {
+        "id": "pantalon-gris",
+        "titulo": "Pantalon Gris",
+        "imagen": "./assets/image/pantalon-gris.jpg",
+        "categoria": {
+            "nombre": "Pantalones",
+            "id": "pantalones"
+        },
+        "precio": 16000
+      }
+  ]

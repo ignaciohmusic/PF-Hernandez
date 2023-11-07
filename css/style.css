@@ -1,38 +1,324 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'DM Serif Text', serif;
+    font-family: 'Rubik', sans-serif;
 }
-body {
-    height: 600vh;
+
+:root {
+    --main: #3c617a;
+    --main-light: #467594;
+    --white: #ececec;
+    --gray: #e2e2e2;
+    --red: #961818;
+    --black: #000000;
+    --crudo:  #e7e1dbb6;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.contenedor-principal {
+    height: 222vh;
     display: grid;
-    grid-template-rows: 3% 84% 13%;
-    grid-template-columns: repeat(3, 1fr) ;
+    grid-template-rows: 6% 91% 3%;
+    grid-template-columns: 1fr;
     grid-template-areas:
-    "header header header"
-    "main main main"
-    "footer footer footer";
+    "header"
+    "main"
+    "footer";
+    background-color: var(--main);
+    color: var(--white);
 }
+
 header {
-    background-color: black;
+    grid-area: header;
+    background-color: var(--main-light);
     position: sticky;
     top: 0;
-    grid-area: header;
-} 
-#logoMarca {
+}
+
+.free-shipping {
+    background-color: var(--black);
+    font-size: .80rem;
+    display: flex;
+    justify-content: center;
+    padding: .2rem 0;
+    margin: 0;
+    letter-spacing: .1rem;
+}
+
+.logo {
+    color: var(--white);
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    margin: .5rem;
+    
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+ul {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding: 1rem;
+    gap: 1.5rem;
+}
+
+.boton-menu{
+    background-color: transparent;
+    border: 0;
+    color: var(--white);
+    cursor: pointer;
+    font-weight: 600;
+    font-size: .95rem;
+}
+
+.navbar-nav button:hover {
+    transform: scale(1.1);
+    transition: .2s;
+}
+
+.boton-carrito {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 600;
+    font-size: .95rem;
+}
+
+main {
+    grid-area: main;
+    background-color: var(--white) ;
+    border-radius: 0.5rem;
+    margin: 0.7rem;
+    padding: 1.2rem;
+    
+}
+
+.titulo-principal {
+    display: flex;
+    justify-content: center;
+    color: var(--main);
+    font-size: 2.5rem;
+    padding: 0rem 0rem 1.5rem;
+}
+
+.formalario-busqueda {
+    text-decoration: none;
+    display: flex;
+    border: 2px, solid var(--white);
+    justify-content: flex-end;
+    padding: 1rem;
+    height: 4.4rem;
+}
+.filtro {
+    display: none;
+}
+input {
+    text-decoration: none;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    padding: 0rem 0rem 0rem .7rem;
+    border: 2px, solid var(--white);
+    outline: none;
+}
+
+.boton-filtrar {
+    text-decoration: none;
+    border: 0;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    padding: .5rem;
+    background-color: var(--main);
+    color: var(--white);
+    cursor: pointer;
+}
+
+.detalles-productos {
+    color: var(--white);
+    background-color: var(--main-light);
+    border-radius: .5rem;
+    padding: 1.5rem;
+    gap: .5rem;
+    margin-top: -.8rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+}
+   
+.contenedor-productos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    max-width: 100%;
+}
+.agregar-producto {
+    background-color: #c4bebe75;
+    border-radius: .5rem;
+    padding: 0.4rem 5rem 0.4rem;
+    border: 0;
+    color: var(--black);
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 1rem;
+    transition: background-color .5s, color .2s;
+}
+
+.agregar-producto:hover {
+    background-color: var(--main);
+    color: var(--white);
+}
+
+.imagen-producto {
+    max-width: 100%;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+/* carrito */
+.contenedor-principal-carrito {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 14.2% 82.1% 3%;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "header"
+    "main"
+    "footer";
+    background-color: var(--main);
+    color: var(--white);
+}
+
+.carrito-vacio, 
+.compra-realizada {
+    color: var(--black);
+    font-weight: 450;
     display: flex;
     justify-content: center;
 }
-nav div a {
+
+.productos-carrito {
+    background-color: var(--crudo);
+    border-radius: 1rem;
+    padding: 0.5rem;
+    color: var(--black);
+    font-weight: 400;
+}
+
+.imagen-producto-carrito {
+    width: 5rem;
+    border-radius: 1rem;
+}
+
+.producto-carrito {
+    display: flex;
+    gap: 1.7rem;
+}
+
+.titulo-producto-carrito {
+    font-size: 1.2rem;
+}
+
+.cantidad-producto-carrito {
+    font-size: 1.2rem;
+    padding:0rem 1rem;
+
+}
+
+.precio-prodcuto-carrito {
+    font-size: 1.2rem;
+    padding:0rem 1rem;
+}
+
+.subtotal-producto-carrito {
+    font-size: 1.2rem;
+    padding:0rem 1rem;
+}
+
+.eliminar-producto-carrito {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: var(--red);
+    text-decoration: none;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    margin-left: 68rem;
+    font-size: 1.7rem;
+}
+
+.acciones-carrito {
+    display: flex;
+    justify-content: space-between;
+    color: var(--black);
+}
+
+.acciones-carrito-izquierda {
+    text-decoration: none;
+    padding: 1rem 0rem;
+}
+
+.vaciar-carrito {
+    text-decoration: none;
+    border: 0;
+    border-radius: 1rem;
+    padding: .5rem 1rem;
+    cursor: pointer;
+    background-color: var(--main-light);
+    color: var(--white);
     font-size: 1rem;
 }
-main {
-    background-color: rgb(255, 255, 255);
-    grid-area: main;
+
+.acciones-carrito-derecha {
+    display: flex;
+    text-decoration: none;
+    padding: 1rem 0rem;
+}
+.carrito-costo-total {
+    background-color: var(--crudo);
+    padding: 0rem 1.2rem 0rem .8rem;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    color: var(--black);
+}
+.carrito-comprar {
+    text-decoration: none;
+    border: 0;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    padding: .5rem 1rem;
+    cursor: pointer;
+    background-color: var(--main-light);
+    color: var(--white);
+    font-size: 1rem;
+}
+
+.vaciar-carrito:hover { 
+    background-color: var(--main);
+    color: var(--white);
+}
+.carrito-comprar:hover {
+    background-color: var(--main);
+    color: var(--white);
 }
 footer {
-    background-color: black;
     grid-area: footer;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
 }
