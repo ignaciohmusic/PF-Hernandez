@@ -44,16 +44,6 @@ header {
     top: 0;
 }
 
-.free-shipping {
-    background-color: var(--black);
-    font-size: .80rem;
-    display: flex;
-    justify-content: center;
-    padding: .2rem 0;
-    margin: 0;
-    letter-spacing: .1rem;
-}
-
 .logo {
     color: var(--white);
     text-decoration: none;
@@ -211,7 +201,6 @@ input {
 }
 
 .productos-carrito {
-    background-color: var(--crudo);
     border-radius: 1rem;
     padding: 0.5rem;
     color: var(--black);
@@ -226,6 +215,11 @@ input {
 .producto-carrito {
     display: flex;
     gap: 1.7rem;
+    background-color: var(--crudo);
+    border-radius: 1rem;
+    padding: 0.5rem;
+    color: var(--black);
+    font-weight: 400;
 }
 
 .titulo-producto-carrito {

@@ -1,11 +1,13 @@
 let productos = [];
 
-fetch("./js/lista-productos.json")
-    .then(response => response.json())
-    .then(data => {
-        productos = data;
-        cargarProductos(productos);
-})
+async function cargarListaProductos() {
+      const response = await fetch("./js/lista-productos.json");
+      const data = await response.json();
+      productos = data;
+      cargarProductos(productos);
+}
+
+cargarListaProductos();
 
 const contenedorProductos = document.getElementById("contenedor-productos");
 const botonFiltrarPrecio = document.getElementById("boton-filtrar-precio");
@@ -41,15 +43,12 @@ cargarProductos(productos);
 botonFiltrarPrecio.addEventListener("click", () => {
   const precioMax = parseInt(precioFiltrar.value);
   const precioMin = 0;
-
   const productosFiltrados = productos.filter(producto => producto.precio >= precioMin && producto.precio <= precioMax);
   cargarProductos(productosFiltrados, precioMin, precioMax);
-
 });
 
 botonesMenu.forEach(boton => {
   boton.addEventListener("click", (e) => {
-
     if (e.currentTarget.id != "TodosLosPruductos") {
       const categoriaProducto = productos.find(producto => producto.categoria.id === e.currentTarget.id);
       tituloPrincipal.innerText = categoriaProducto.categoria.nombre;
@@ -77,6 +76,22 @@ if (productosCarritoLocalStorage) {
 }
 
 function agregarAlCarrito(e) {
+  Toastify({
+    text: "Producto agregado de forma correcta",
+    duration: 2000,
+    close: true,
+    gravity: "bottom", 
+    position: "right", 
+    stopOnFocus: true, 
+    style: {
+      background: "linear-gradient(0deg, rgba(47,138,198,0.6278886554621849) 0%, rgba(70,117,148,1) 82%)",
+      borderRadius: ".5rem",
+      textTransform: "uppercase",
+      fontSize: ".75rem"
+    },
+    onClick: function(){}
+  }).showToast();
+
   const idBoton = e.currentTarget.id;
   const agregadoDeProducto = productos.find(producto => producto.id === idBoton);
 
@@ -99,21 +114,6 @@ function actualizarNumero() {
 }
 
 cargarProductos(productos);
-
-  // console.log("El total de la compra es de: $" + totalCompra);
-  
-  // function calcularEnvio(total) {
-  //   if (total >= 50000) {
-  //     alert("El envío es gratuito.");
-  //     return 0;
-  //   } else {
-  //     alert("El costo de envío es de $3000.");
-  //     return 3000;
-  //   }
-  // }
-  
-  // const costoEnvio = calcularEnvio(totalCompra);
-  // console.log("El costo de envío es de $" + costoEnvio);
 
 
 
